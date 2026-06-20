@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,13 +8,42 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/normalizer.css">
 </head>
+
 <body>
     <main class="display" id="display">
     </main>
     <section class="stats-menu">
         <p class="stats-menu__subtitle" id="emul-status">Симуляция остановленна</p>
-        <button class="stats-menu__button--success" id="emul-status-button">Запустить</button>
+        <div class="stats-menu__button-container">
+            <button class="stats-menu__button--success" id="emul-status-button">Запустить</button>
+            <button class="stats-menu__button--success" id="emul-restart-button">Перезапустить</button>
+        </div>
+
+
+        <p class="stats-menu__subtitle">Статистика популяций</p>
+        <div class="population-statistics" id="population-statistics">
+        </div>
+
+        <form class="form" action="" name="form">
+            <div class="form__row">
+                <label class="form__label">Количество лис: </label>
+                <input type="text" name="fox" class="form__input">
+            </div>
+            <div class="form__row">
+                <label class="form__label">Количество кроликов: </label>
+                <input type="text" name="rabbit" class="form__input">
+            </div>
+            <div class="form__row">
+                <label class="form__label">Количество травы: </label>
+                <input type="text" name="grass" class="form__input">
+            </div>
+            <div class="form__row">
+                <label class="form__label">Время одного тика: </label>
+                <input type="text" name="tick" class="form__input">
+            </div>
+        </form>
     </section>
     <script src="./js/script.js"></script>
 </body>
+
 </html>
