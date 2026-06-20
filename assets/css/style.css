@@ -1,0 +1,100 @@
+:root {
+    --color-bg: #1A1a1d;
+    --color-gray: #4e4e50;
+    --color-red: #c3073f;
+    --color-green:rgb(7, 195, 29);
+    --color-text: #e4e4e4;
+}
+
+@font-face {
+    font-family: 'Circe';
+    src: url('./../fonts/Circe-Regular.woff') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: Circe;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    padding: 72px;
+    background-color: var(--color-bg);
+    width: 100vw;
+    height: 100vh;
+    gap: 10px;
+
+}
+
+.display {
+    height: 100%;
+    aspect-ratio: 1/1;
+    border: 1px solid var(--color-gray);
+    border-radius: 6px;
+    display: grid;
+    grid-template-columns: repeat(50, 1fr);
+    grid-template-rows: repeat(50, 1fr);
+    gap: 1px;
+    padding: 1px;
+}
+
+.entity--empty {
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--color-gray);
+    border-radius: 6px
+}
+
+.entity--fox {
+    width: 100%;
+    height: 100%;
+    background: var(--color-red);
+    border-radius: 6px
+}
+.entity--rabbit {
+    width: 100%;
+    height: 100%;
+    background: var(--color-gray);
+    border-radius: 6px
+}
+.entity--grass {
+    width: 100%;
+    height: 100%;
+    background: var(--color-green);
+    border-radius: 6px
+}
+
+.stats-menu {
+    width: 400px;
+    min-height: 200px;
+    border: 1px solid var(--color-gray);
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 4px;
+}
+
+.stats-menu__subtitle {
+    color: var(--color-text);
+    font-size: 20px;
+}
+
+.stats-menu__button--success {
+    color: var(--color-text);
+    width: fit-content;
+    border: 1px solid var(--color-green);
+    font-size: 20px;
+    padding: 2px 6px;
+    border-radius: 6px;
+}
+
+.stats-menu__button--error {
+    color: var(--color-text);
+    width: fit-content;
+    border: 1px solid var(--color-red);
+    font-size: 20px;
+    padding: 2px 6px;
+    border-radius: 6px;
+}
